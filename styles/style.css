@@ -1,0 +1,387 @@
+@charset "UTF-8";
+
+::-webkit-scrollbar {
+    background-color: #00ddff;
+    border-radius: 5px;
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #174b53;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(139, 139, 139);
+}
+
+/* Versão Mobile First */
+
+:root {
+    --background-color: rgb(219, 219, 219);
+    --text-color: #000;
+
+    --text-ul-li-a: #000;
+    --button-ul-li-a: #fff;
+
+    --div-conteudo: #fff;
+    --shadow-div-conteudo: 4px 4px 12px #bcbcbc;
+
+    --color-text: #000;
+
+    --color-hr: rgb(229, 231, 235);
+
+    --background-button: #e1e3df;
+
+    --background-redesocial: #e9e9e9;    
+}
+
+* {
+    margin: 0;
+    padding: 0;   
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    transition: all ease 0.3s;
+    color: var(--text-color);
+}
+
+html,body { 
+    background-color: var(--background-color); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1rem;
+    position: relative;
+    width: -webkit-fill-available;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+    position: sticky;
+    top:0;
+    background-color: #ffffff;
+    z-index: 99;
+}
+
+header .logo {
+    width: 100px;
+}
+
+.styleHeaderText h5 {
+    font-weight: 400;
+}
+
+.styleHeaderText h4 {
+    font-weight: 700;
+}
+
+.espacamentoHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 10px;
+}
+
+/* header::after{
+    background-color: #d7f6fb;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 4px 4px 12px #e8e8e8;
+} */
+
+ul li {
+    display: none;
+}
+
+ul li a {
+    display: none;
+    padding: 15px;
+    margin: 6px;
+    color: var(--text-ul-li-a);
+    text-decoration: none;
+    text-align: center;
+    background: var(--button-ul-li-a);
+    border-radius: 6px;
+    transition: all ease 0.3s;
+}
+
+ul li a:hover{
+    background: #174b53;
+    color: rgb(255, 255, 255);
+}
+
+ul li ul.dropdown {
+    position:absolute;
+    width:max-content;
+    background: rgba(0, 0, 0, 0.744);
+    opacity: 0;
+    z-index: -999;
+    margin-top: 50px;
+    border-radius: 6px;
+    transition: all ease 0.3s;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+    z-index: 999;
+    opacity: 1;
+    margin-top: 0;
+}
+
+.conteudoPrincipal {
+    background-color: var(--div-conteudo);
+    box-shadow: var(--shadow-div-conteudo);
+    border-radius: 10px;
+    margin: 2vw;
+    padding: 5px;
+
+    width: 90vw;
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.secaoApresentacao {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: -webkit-fill-available;
+}
+
+div.blocoApresentacao {
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#img1 {
+    background-image: url('../assets/familiaRochaLopes.jpg');
+}
+
+div#img2{
+    background-image: url('../assets/paroquiaCaridade-CE-Decada60.jpg');
+}
+
+div#img3 {
+    background-image: url('../assets/osDramistasEmGuaramiranga2014.jpg');
+}
+
+.styleTextApresentacao {
+    color: white; 
+    font-size:xx-large;
+    margin: 5px;
+}
+
+hr {
+    width: 95%;
+    height: 5px;
+    border: none;
+    border-radius: 6px;
+    margin: 10px;
+    background: var(--color-hr);
+}
+
+.secaoSobreFundacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px;
+}
+
+.espacamentoSecaoSobreFundacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0.5rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    margin-bottom: 20px;
+}
+
+.espacamentoSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0.5rem;
+}
+
+.styleSubText {
+    font-weight:normal;
+}
+
+.button {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-button);
+    
+    padding: 1vh;
+    gap: 10px;
+    color: var(--color-text);
+    font-size: 1em;
+    border-radius: 30px;
+    transition: all ease 0.3s;
+}
+
+.button:hover{
+    background: #174b53;
+    color: rgb(255, 255, 255);
+}
+
+.redesSociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.item-redesocial {
+    background-color: var(--background-redesocial);
+
+    margin: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.redesocial-text {
+    margin: 10px;
+}
+
+.redesocial-icon {
+    opacity: 0.9;
+
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+div .redesocial-icon:hover {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.05);
+}
+
+.downloads {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content:center;
+}
+
+.item-download {
+    background-color: #f9f9f9;
+
+    min-height: 150px;
+    min-width: 200px;
+
+    margin: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.hrVertical {
+    width: 2px !important; 
+    height: 10px !important;
+    border: none !important;
+    border-radius: 6px !important;
+    background: rgb(208, 208, 208) !important;
+}
+
+.divFooterGrid {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 5fr 3fr 2fr;
+    text-align: center;
+
+    /* text align e desativar o grid para o mobile*/
+    
+    width: 80vw;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.divGridFirst{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.divGridHouse {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.styleFundCult{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 5px;
+}
+
+.styleSubTextFooter h5 {
+    font-weight:normal;
+}
+
+.divFinal{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 25px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.divFinal h5 {
+    font-weight:600;
+}
+
+.divFinal h6 {
+    font-weight: normal;
+}
